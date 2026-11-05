@@ -1,6 +1,6 @@
 
 
-![Drones taking off and hovering, connected by a network with glowing signal dots](./assets/drone-network.svg)
+![Drones taking off and hovering, connected by a network with glowing signal dots](../assets/drone-network.svg)
 
 # EIUS Lab
 
