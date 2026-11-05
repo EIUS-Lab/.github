@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 262" width="1200" height="262" role="img" aria-labelledby="title desc">
+  <title id="title">Join EIUS Lab</title>
+  <desc id="desc">Students interested in drones, networking, or AI are welcome to join. You don't need to know all three fields. If you enjoy building things and thinking from the problem first, we'd love to talk. Open to master's students and undergraduate project students. Contact: eiuslab717@gmail.com.</desc>
+  <style>
+    .label { font: 600 12px "Segoe UI", "Helvetica Neue", Arial, sans-serif; letter-spacing: 2.5px; fill: #38e1ff; }
+    .title { font: 700 30px "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #e8f6ff; }
+    .body { font: 400 16px "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #cfe3f5; }
+    .meta { font: 600 15px "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #e8f6ff; }
+    .ic { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .link { fill: none; stroke: #38e1ff; stroke-opacity: .25; stroke-width: 1.2; }
+  </style>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1630"/>
+      <stop offset="1" stop-color="#0f2142"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#2b5cff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#2b5cff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#38e1ff" stroke-opacity=".05"/>
+    </pattern>
+    <filter id="glow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="n1" d="M960 150L1010 82"/>
+    <path id="n2" d="M1010 82L1100 64"/>
+    <path id="n3" d="M1100 64L1130 146"/>
+    <path id="n4" d="M1130 146L1046 178"/>
+    <path id="n5" d="M1046 178L960 150"/>
+    <path id="n6" d="M1010 82L1046 178"/>
+  </defs>
+
+  <rect x="1" y="2" width="1198" height="258" rx="16" fill="url(#card)" stroke="#38e1ff" stroke-opacity=".28"/>
+  <rect x="1" y="2" width="1198" height="258" rx="16" fill="url(#grid)"/>
+  <rect x="24" y="2" width="120" height="2" rx="1" fill="#4fffb0"/>
+
+  <g transform="translate(150 131)">
+    <circle r="90" fill="url(#halo)"/>
+    <circle r="74" fill="none" stroke="#a99bff" stroke-opacity=".45" stroke-dasharray="3 7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="58" fill="#0e1a33" stroke="#38e1ff" stroke-opacity=".6" stroke-width="1.5"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="2.8s" repeatCount="indefinite"/>
+      <g transform="translate(0 -8) scale(.72)">
+        <path d="M-38 -6H38" stroke="#9fb3d9" stroke-width="3" stroke-linecap="round"/>
+        <path d="M-36 -6V-12M36 -6V-12" stroke="#9fb3d9" stroke-width="2.5" stroke-linecap="round"/>
+        <ellipse cx="-36" cy="-13" rx="20" ry="2.6" fill="#38e1ff" fill-opacity=".6">
+          <animate attributeName="rx" values="20;5;20" dur=".16s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="36" cy="-13" rx="20" ry="2.6" fill="#38e1ff" fill-opacity=".6">
+          <animate attributeName="rx" values="5;20;5" dur=".16s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M-12 3L-18 16M12 3L18 16M-23 16H-13M13 16H23" stroke="#9fb3d9" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <rect x="-17" y="-11" width="34" height="15" rx="6" fill="#16264a" stroke="#38e1ff" stroke-width="1.5"/>
+        <circle cx="0" cy="8" r="3" fill="#4fffb0" filter="url(#glow)"/>
+      </g>
+    </g>
+    <g class="ic" stroke="#4fffb0" stroke-width="2.2">
+      <path d="M-8 30L0 22L8 30">
+        <animate attributeName="opacity" values=".2;1;.2" dur="1.4s" repeatCount="indefinite"/>
+      </path>
+      <path d="M-8 40L0 32L8 40">
+        <animate attributeName="opacity" values=".2;1;.2" dur="1.4s" begin="-.7s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <path d="M290 50V212" stroke="#38e1ff" stroke-opacity=".18"/>
+
+  <text x="322" y="58" class="label">JOIN US</text>
+  <text x="322" y="98" class="title">Take off with EIUS Lab</text>
+  <text x="322" y="134" class="body">Students interested in drones, networking, or AI are welcome to join.</text>
+  <text x="322" y="158" class="body">You don't need to know all three fields. If you enjoy building things</text>
+  <text x="322" y="182" class="body">and thinking from the problem first, we'd love to talk.</text>
+
+  <g transform="translate(334 221)" class="ic" stroke="#38e1ff">
+    <path d="M0 -6L10 -1L0 4L-10 -1Z"/>
+    <path d="M-6 1V5Q0 9 6 5V1"/>
+  </g>
+  <text x="354" y="226" class="meta">Master's students / undergraduate project students</text>
+
+  <g transform="translate(790 221)" class="ic" stroke="#4fffb0">
+    <rect x="-9" y="-6.5" width="18" height="13" rx="2"/>
+    <path d="M-9 -5L0 1.5L9 -5"/>
+  </g>
+  <text x="810" y="226" class="meta">eiuslab717@gmail.com</text>
+
+  <g>
+    <use href="#n1" class="link"/><use href="#n2" class="link"/><use href="#n3" class="link"/>
+    <use href="#n4" class="link"/><use href="#n5" class="link"/><use href="#n6" class="link"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="960" cy="150" r="4" fill="#38e1ff"/>
+    <circle cx="1010" cy="82" r="4" fill="#4fffb0"/>
+    <circle cx="1100" cy="64" r="3.5" fill="#a99bff"/>
+    <circle cx="1130" cy="146" r="4" fill="#38e1ff"/>
+    <circle cx="1046" cy="178" r="3.5" fill="#bdf7ff"/>
+    <circle r="2.5" fill="#bdf7ff">
+      <animateMotion dur="2s" repeatCount="indefinite"><mpath href="#n1"/></animateMotion>
+    </circle>
+    <circle r="2.5" fill="#4fffb0">
+      <animateMotion dur="2.4s" begin="-.8s" repeatCount="indefinite"><mpath href="#n2"/></animateMotion>
+    </circle>
+    <circle r="2.5" fill="#a99bff">
+      <animateMotion dur="2.2s" begin="-.4s" repeatCount="indefinite"><mpath href="#n3"/></animateMotion>
+    </circle>
+    <circle r="2.5" fill="#bdf7ff">
+      <animateMotion dur="2.6s" begin="-1.2s" repeatCount="indefinite"><mpath href="#n4"/></animateMotion>
+    </circle>
+    <circle r="2.5" fill="#4fffb0">
+      <animateMotion dur="2s" begin="-1s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#n6"/></animateMotion>
+    </circle>
+  </g>
+  <circle cx="1010" cy="82" r="4" fill="none" stroke="#4fffb0">
+    <animate attributeName="r" values="4;22" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".7;0" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

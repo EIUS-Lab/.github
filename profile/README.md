@@ -1,44 +1,35 @@
 
-
 ![Drones taking off and hovering, connected by a network with glowing signal dots](../assets/drone-network.svg)
 
 # EIUS Lab
 
-**邊緣智能與無人系統實驗室**  
-Edge Intelligence & Unmanned Systems Lab · 龍華科技大學 資訊工程系
+**Edge Intelligence & Unmanned Systems Lab**  
+Department of Computer Science and Information Engineering · Lunghwa University of Science and Technology
 
-![UAV Drone Systems](https://img.shields.io/badge/UAV-Drone%20Systems-38e1ff?style=flat-square)![Wireless Communication](https://img.shields.io/badge/Network-Wireless%20Communication-4fffb0?style=flat-square)![AI Intelligent Decision](https://img.shields.io/badge/AI-Intelligent%20Decision-a99bff?style=flat-square)
+![UAV Systems, Wireless Networks, Edge AI](../assets/cards/tags.svg)
 
----
+![](../assets/divider.svg)
 
-## 關於我們
+## ![](../assets/icons/about.svg) About Us
 
-EIUS Lab 專注於 **無人機系統、無線網路通訊與人工智慧** 的交叉研究。我們讓無人機不只是會飛的載具，而是能彼此連線、即時傳遞資料，並由 AI 協助感知與決策的空中智慧節點。
+EIUS Lab focuses on interdisciplinary research across **drone systems, wireless communication, and artificial intelligence**. We see drones not just as flying vehicles, but as intelligent aerial nodes that connect with each other, exchange data in real time, and rely on AI for perception and decision-making.
 
-研究從問題定義、演算法設計、模擬驗證一路延伸到實機測試，期望把理論成果落實到真實場域。
+Our research spans problem definition, algorithm design, and simulation, all the way to real-world flight testing, with the goal of turning theory into results that work in the field.
 
-- **指導教授：** Tsai, Hua-Wen
-- **成立時間：** 2020
-- **實驗室位置：** F717
+![Advisor: Tsai, Hua-Wen. Established: 2020. Location: Room F717.](../assets/cards/info.svg)
 
-## 實驗室特色
+## ![](../assets/icons/features.svg) What Makes Us Different
 
-| 特色 | 說明 |
-| --- | --- |
-| 跨領域整合 | 將飛行控制、通訊網路與 AI 模型放在同一個系統中思考，而非各自獨立研究 |
-| 從模擬到實機 | 先以模擬環境快速驗證想法，再進入實機飛行與場域測試 |
-| 軟硬體兼具 | 同時累積嵌入式、韌體、網路協定與機器學習的實作能力 |
+![Cross-disciplinary integration: flight control, communication networks, and AI models are designed as one system rather than studied in isolation. From simulation to real flight: ideas are validated quickly in simulation, then taken to real flights and field tests. Hardware and software: hands-on experience across embedded systems, firmware, network protocols, and machine learning.](../assets/cards/features.svg)
 
-## 研究方向
+## ![](../assets/icons/research.svg) Research Areas
 
-### 1. 人工智慧驅動的感知與決策
+![Research area 01, AI-Driven Perception and Decision-Making. Research question: How can AI understand its environment and make decisions in real time on drones with limited computing power and energy? Techniques and methods: image recognition, lightweight models, AI agents.](../assets/cards/research-ai.svg)
 
-- **研究問題：** 如何讓 AI 在算力與能源有限的無人機上，即時理解環境並做出決策
-- **技術與方法：** 影像辨識、輕量化模型、AI Agent
+## ![](../assets/icons/join.svg) Join Us
 
-## 加入我們
+[![Students interested in drones, networking, or AI are welcome to join. You don't need to know all three fields. If you enjoy building things and thinking from the problem first, we'd love to talk. Open to master's students and undergraduate project students.](../assets/cards/join.svg)](mailto:eiuslab717@gmail.com)
 
-歡迎對無人機、網路通訊或人工智慧有興趣的同學加入。不需要三個領域都熟悉，只要願意動手實作、從問題出發思考，我們都很樂意一起討論。
+**Contact:** [eiuslab717@gmail.com](mailto:eiuslab717@gmail.com)
 
-- **招生對象：**碩士班 / 專題生
-- **聯絡方式：[eiuslab717@gmail.com](mailto:eiuslab717@gmail.com)**
+![](../assets/divider.svg)

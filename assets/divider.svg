@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24" role="img" aria-label="Divider">
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38e1ff" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#38e1ff" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#4fffb0" stop-opacity=".8"/>
+      <stop offset=".7" stop-color="#a99bff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#a99bff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="11.5" width="1200" height="1" fill="url(#line)"/>
+  <circle cx="300" cy="12" r="2.5" fill="#38e1ff" fill-opacity=".7"/>
+  <circle cx="450" cy="12" r="1.8" fill="#38e1ff" fill-opacity=".5"/>
+  <circle cx="750" cy="12" r="1.8" fill="#a99bff" fill-opacity=".5"/>
+  <circle cx="900" cy="12" r="2.5" fill="#a99bff" fill-opacity=".7"/>
+  <path d="M600 5L607 12L600 19L593 12Z" fill="#0e1a33" stroke="#38e1ff" stroke-width="1.5"/>
+  <circle cx="600" cy="12" r="2" fill="#4fffb0" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;.35;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <g filter="url(#glow)">
+    <circle cy="12" r="2.5" fill="#bdf7ff">
+      <animate attributeName="cx" values="150;590" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cy="12" r="2.5" fill="#a99bff">
+      <animate attributeName="cx" values="1050;610" dur="3.5s" begin="-1.75s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.5s" begin="-1.75s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

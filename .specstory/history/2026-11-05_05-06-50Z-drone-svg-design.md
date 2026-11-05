@@ -1392,3 +1392,1004 @@ I've rewritten `README.md` as a Traditional Chinese introduction to EIUS Lab, bu
 **How I checked it:** I rendered the README with GitHub's own Markdown API and viewed it in a browser with GitHub's dark styling. The Chinese text, tables, badges and banner all display correctly, and the Mermaid diagram parsed with no errors. I confirmed the file is valid UTF-8 and removed the temporary preview files afterwards.
 
 **Not checked:** I haven't seen it on github.com itself. For an organisation's profile page, GitHub reads `profile/README.md`, not the root `README.md`. If that's the goal, move the content there and change the banner path to `../assets/drone-network.svg`.
+
+---
+
+_**User**_
+
+all use the English @profile/README.md 
+
+---
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+I need everything in English inside profile/README.md. README.md now shows 45 lines, suggesting the user may have edited it, so I should read it and verify profile/README.md exists.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+I'll check the current state of both READMEs first. The root one is now 45 lines, so you may have edited it.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+File not found
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **1** result in **1** directory</summary>
+
+Directory: **`d:\project\.github`** (1 file)
+
+| File |
+|------|
+| `profile\README.md` |
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Get-ChildItem -Recurse -Force -File | Where-Object { $_.FullName -notmatch &#39;\\\.git\\|\\\.specstory\\&#39; } | Select-Object FullName, Length; git status --short</summary>
+```bash
+Get-ChildItem -Recurse -Force -File | Where-Object { $_.FullName -notmatch '\\\.git\\|\\\.specstory\\' } | Select-Object FullName, Length; git status --short
+```
+
+```
+
+ D "EIUS-Lab-\345\257\246\351\251\227\345\256\244\350\263\207\350\250\212.md"
+ D README.md
+FullName                                    Length
+--------                                    ------
+D:\project\.github\.cursorindexingignore       113
+D:\project\.github\assets\drone-network.svg  15751
+D:\project\.github\profile\README.md          2043
+
+
+
+```
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\project\.github\profile\README.md</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+I need to translate the README content into English while preserving the user's structure, converting the lab name and university department into their proper official English equivalents.
+
+I'll keep the advisor name formatted as "Tsai, Hua-Wen" to avoid altering it, and translate the location as "Room F717." I should do a quick web search to confirm the correct English department name before finalizing.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+I'll translate the updated README at `profile/README.md` into English while preserving your structure, starting by looking up the official English name for 龍華科技大學 資訊工程系 to make sure it's accurate.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="get_mcp_tools"><details>
+<summary>Tool use: **get_mcp_tools**</summary>
+
+Parameters:
+
+```json
+{
+  "server": "cursor",
+  "toolName": "WebSearch"
+}
+```
+Result:
+
+```json
+{
+  "content": "{\"tool\":\"WebSearch\",\"description\":\"Search the web for real-time information about any topic. Returns summarized information from search results and relevant URLs.\\n\\nUse this tool when you need up-to-date information that might not be available or correct in your training data, or when you need to verify current facts.\\nThis includes queries about:\\n- Libraries, frameworks, and tools whose APIs, best practices, or usage instructions are frequently updated. (\\\"How do I run Postgres in a container?\\\")\\n- Current events or technology news. (\\\"Which AI model is best for coding?\\\")\\n- Informational queries similar to what you might Google (\\\"kubernetes operator for mysql\\\")\\n\\nIMPORTANT - Use the correct year in search queries:\\n- Today's date is 2026-11-05. You MUST use this year when searching for recent information, documentation, or current events.\\n- Example: If today is 2026-11-05 and the user asks for \\\"latest React docs\\\", search for \\\"React documentation 2026\\\", NOT \\\"React documentation 2025\\\"\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"search_term\":{\"type\":\"string\",\"description\":\"The search term to look up on the web. Be specific and include relevant keywords for better results. For technical queries, include version numbers or dates if relevant.\"},\"explanation\":{\"type\":\"string\",\"description\":\"One sentence explanation as to why this tool is being used, and how it contributes to the goal.\"}},\"required\":[\"search_term\"]}}"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="web_search"><details>
+<summary>Tool use: **web_search**</summary>
+
+Parameters:
+
+```json
+{
+  "searchTerm": "龍華科技大學 資訊工程系 英文名稱 Department Lunghwa University of Science and Technology"
+}
+```
+Result:
+
+```json
+{
+  "isFinal": true,
+  "references": [
+    {
+      "chunk": "Links:\n1. [Department of Computer Information and Network Engineering \u0026 Master Program  - Lunghwa University of Science and Technoloty, Department Computer Information and Network Engineering \u0026 Master Program](https://cin.lhu.edu.tw/index.php?Lang=en)\n2. [本系介紹  - 龍華科技大學資訊工程系暨研究所](https://cin.lhu.edu.tw/p/412-1017-82.php?Lang=zh-tw)\n3. [龍華科技大學-資訊工程系暨研究所  - 龍華科技大學資訊工程系暨研究所](https://cin.lhu.edu.tw/index.php?Lang=zh-tw)\n4. [College of Engineering  - Office of International and Cross-Strait Cooperation](https://oia.lhu.edu.tw/p/412-1007-278.php?Lang=en)\n5. [資訊工程系 - 龍華科技大學 - 北部地區 - 全國技專校院 - 技專校院招生策略委員會｜四技、二技、二專、五專招生宣導網站](https://techadmi.edu.tw/schools_detail_search.php?psrid=206\u0026seq=4604)\n\nSynthesis:\n龍華科技大學資訊系系的英文名稱為 Department of Computer Science and Information Engineering。[1]\n\nHighlights:\n\u003cresult id=\"1\"\u003e\n\u003ctitle\u003eDepartment of Computer Information and Network Engineering \u0026 Master Program  - Lunghwa University of Science and Technoloty, Department Computer Information and Network Engineering \u0026 Master Program\u003c/title\u003e\n\u003curl\u003ehttps://cin.lhu.edu.tw/index.php?Lang=en\u003c/url\u003e\n\u003ccontent\u003e地址：33306 桃園市龜山區萬壽路一段300號 綜合大樓 3樓\n\n(3F, Teaching Building, No. 300, Sec 1, Wanshou Rd., Guishan District, Taoyuan City, 33326, Taiwan (R.O.C.))\n\n聯絡電話：(02)8209-3211 (02-82093211) 分機：5701\n\n單位信箱： cin@mail.lhu.edu.tw\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"2\"\u003e\n\u003ctitle\u003e本系介紹  - 龍華科技大學資訊工程系暨研究所\u003c/title\u003e\n\u003curl\u003ehttps://cin.lhu.edu.tw/p/412-1017-82.php?Lang=zh-tw\u003c/url\u003e\n\u003ccontent\u003e### 一、系所簡介\n\n資訊網路工程系(115學年度核准更名為「資訊工程系」)自93學年度正式設立，並於106學年度增設碩士班，致力於提供學生高層次的學術研究平台。 本系專注於資訊安全、人工智慧與雲端物聯網等三大領域，強化跨領域整合與創新技術的培養，讓學生能夠掌握未來科技的脈動。本系日益成長茁壯，科技大學系所評鑑一等，並通過IEET資訊教育認證（CAC），完成與國際接軌。目前的發展重點為資訊工程技術與網路技術的發展，強調專業學術領域的精進，著重系統整合，特重在智慧物聯網的整合應用，期以培養學生深度專業素養與獨立的研究能力，並希望本系的畢業生成為優秀的程式設計師、網路管理工程師及物聯
+… (output truncated)
+```
+User decision: **accepted**
+
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+The department's name changed to 資訊工程系 for academic year 115, but the official English site still shows the old "Computer Information and Network Engineering" title, so there's no confirmed new English name yet. I'll translate it as "Department of Computer Science and Information Engineering" as the standard rendering, while flagging to the user that the official page hasn't updated its English name.
+
+The university's official name is "Lunghwa University of Science and Technology." Now I'll draft the English version, keeping the original structure but tightening the contact formatting.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+The department was renamed 資訊工程系 for the 115 academic year, but its English site still uses the old name. I'll use the standard translation for 資訊工程系 and flag it for you to confirm.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\profile\README.md</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+Let me double-check there's no leftover CJK text and confirm the encoding is valid before rendering it through the GitHub API.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+Now I'll check that no Chinese text remains and render it with GitHub's API.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $s = [IO.File]::ReadAllText((Resolve-Path profile\README.md), (New-Object Text.UTF8Encoding($false, $true))); &#34;CJK chars: &#34; + ([regex]::Matches($s, &#39;[\u3000-\u9fff\uff00-\uffef]&#39;)).Count
+$tmp = Join-Path $env:TEMP &#34;eius-req.json&#34;; [IO.File]::WriteAllText($tmp, (@{ text = $s; mode = &#34;gfm&#34;; context = &#34;eqwgeryfgbdf/.github&#34; } | ConvertTo-Json -Compress), (New-Object Text.UTF8Encoding($false)))
+cmd /c &#34;gh api /markdown --input `&#34;$tmp`&#34; &gt; `&#34;$env:TEMP\eius-out.html`&#34;&#34;
+$h = [IO.File]::ReadAllText(&#34;$env:TEMP\eius-out.html&#34;, [Text.Encoding]::UTF8); &#34;tables: &#34; + ([regex]::Matches($h, &#39;&lt;table&#39;)).Count + &#34;, headings: &#34; + ([regex]::Matches($h, &#39;&lt;h[1-3]&#39;)).Count + &#34;, images: &#34; + ([regex]::Matches($h, &#39;&lt;img&#39;)).Count + &#34;, mailto: &#34; + $h.Contains(&#39;mailto:eiuslab717@gmail.com&#39;)
+Remove-Item $tmp, &#34;$env:TEMP\eius-out.html&#34;</summary>
+```bash
+$s = [IO.File]::ReadAllText((Resolve-Path profile\README.md), (New-Object Text.UTF8Encoding($false, $true))); "CJK chars: " + ([regex]::Matches($s, '[\u3000-\u9fff\uff00-\uffef]')).Count
+$tmp = Join-Path $env:TEMP "eius-req.json"; [IO.File]::WriteAllText($tmp, (@{ text = $s; mode = "gfm"; context = "eqwgeryfgbdf/.github" } | ConvertTo-Json -Compress), (New-Object Text.UTF8Encoding($false)))
+cmd /c "gh api /markdown --input `"$tmp`" > `"$env:TEMP\eius-out.html`""
+$h = [IO.File]::ReadAllText("$env:TEMP\eius-out.html", [Text.Encoding]::UTF8); "tables: " + ([regex]::Matches($h, '<table')).Count + ", headings: " + ([regex]::Matches($h, '<h[1-3]')).Count + ", images: " + ([regex]::Matches($h, '<img')).Count + ", mailto: " + $h.Contains('mailto:eiuslab717@gmail.com')
+Remove-Item $tmp, "$env:TEMP\eius-out.html"
+```
+
+```
+CJK chars: 0
+tables: 1, headings: 6, images: 4, mailto: True
+
+```
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+`profile/README.md` is now entirely in English. I kept your edited structure and real details: the advisor, the 2020 founding year, room F717, the single research area, and the contact email.
+
+**What changed:**
+- **Header:** "Edge Intelligence & Unmanned Systems Lab", followed by the department and Lunghwa University of Science and Technology.
+- **Sections:** All headings, table rows and list labels are translated. For example, 關於我們 is now "About Us", 實驗室特色 is "What Makes Us Different", and 加入我們 is "Join Us".
+- **Small fixes:** I added the missing space after "Open to:" and changed the contact line so only the email link is shown, without wrapping it in bold.
+- **Unchanged:** The banner path (`../assets/drone-network.svg`) and the badges stay as they were. The banner SVG was already in English.
+
+**Checks:** The file is valid UTF-8 with no Chinese characters left. GitHub's Markdown API renders it with the expected headings, the table, the banner and badges, and a working email link.
+
+**Please confirm the department name.** I used "Department of Computer Science and Information Engineering", the standard translation of 資訊工程系. The department was renamed in the 115 academic year, and its [English site](https://cin.lhu.edu.tw/index.php?Lang=en) still shows the old name, "Computer Information and Network Engineering". I couldn't find an official English name for the new one, so change it if the university uses something different.
+
+---
+
+_**User**_
+
+1. Use more svg symbol 
+2. No use emoji
+3. Consistent style
+4. more svg card to decoration
+
+---
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+I'm planning more SVG icons matching the banner's dark navy and cyan/green/violet glow style, avoiding emoji. I'm considering building three feature cards, each with an icon, title, and description embedded directly in the SVG for visual consistency.
+
+I also want to design an info card for advisor/location details, a research area card with a brain-chip icon, a join-us CTA card, small inline SVG icons next to section headings, and a glowing divider line with nodes. For badges, I'm leaning toward replacing shields.io badges with custom local SVG pills to keep the style unified, while being careful that text inside SVGs needs manual line breaks since GitHub renders them as static images without automatic wrapping.
+
+For accessibility, I'm planning to keep plain markdown text for sections like About Us while using decorative SVG cards with descriptive alt text for features and research areas, so the content remains searchable. For the actual asset files, I'm organizing them into an icons folder for section headers and separate card SVGs for the info tiles, feature cards, and other visual elements, each reusing consistent icon drawings and color styling.
+
+I want the join card's email wrapped in a clickable mailto link around the image, which GitHub's markdown sanitizer should allow, plus a text line beneath. Then I'm planning a glowing divider SVG with node dots and a moving dot, a local tags.svg replacing shield badges with pill-shaped icons for drone/network/AI, and small icon images next to section headings.
+
+For the heading icons, I'm weighing alignment options since GitHub's sanitizer may not respect vertical-align attributes well, so I'll just use a simple inline image at a size close to the heading's line-height and check how it renders in preview rather than relying on deprecated alignment tricks.
+
+I'm defining a consistent visual system: dark navy gradient cards with cyan-glow strokes, rounded corners, a cyan/green/violet accent palette, Segoe UI typography, thin round-capped cyan icon strokes with small glow and green dot accents, subtle corner circuit details, and light pulsing/flowing animations to match the banner style—while double-checking that no emoji have crept in anywhere.
+
+Now I'm sketching out each small SVG file individually, starting with a tag-pill row of three rounded badges with mini icons (like a tiny drone glyph) and short labels, making sure to escape special characters like middots and ampersands properly for valid SVG markup.
+
+Drawing the icon set...
+
+Now I'm laying out the features.svg with three cards, each featuring an icon ring, title, wrapped description text, and a numbered accent line at the bottom, carefully calculating character wrapping to fit the 330px width.
+
+I'll shorten the titles to "Cross-Disciplinary," "Simulation to Flight," and "Hardware + Software," with three-line descriptions underneath each kept short enough to fit the card width. Now I'm sketching the icons for each card, like overlapping circles to represent integration.
+
+Still designing icons...
+
+For the research card, I'm planning an eye-and-neural-node icon with an animated scanning line, paired with a muted cyan label and title text on the right.
+
+Below that, I'm laying out a "RESEARCH QUESTION" section with wrapped question text, then a "TECHNIQUES" row of labeled pills (Image Recognition, Lightweight Models, AI Agents) each with a small icon, sizing the pill widths based on character count.
+
+Now I'm weighing whether to keep the original markdown bullets alongside the new card, deciding that would be redundant — I'll replace the advisor list and table content with the cards, preserve the prose paragraphs as markdown, and keep full detail in the alt text for accessibility.
+
+For the join.svg, I'm designing a 1200x220 card with a drone taking off icon on the left, a "Join Us" heading, two lines of invitation text about drones/networking/AI, and rows for student roles and the contact email, plus a small decorative network graph cluster on the right, wrapped in a mailto link. Next I'm planning out the icon assets needed for each section heading.
+
+Writing icon SVG code...
+
+For "research" I'm sketching a radar/target icon with concentric circles and crosshairs, and for "join" a user-plus icon with a head, body, and plus sign. I'm also planning the heading markup to embed these icons inline with titles, and considering using a custom divider graphic between sections instead of a plain markdown rule.
+
+I'm thinking through whether cards should have subtle animation like pulsing dots or flowing dashes, keeping it light, and making sure all the SVG text uses proper HTML entities for special characters so encoding stays clean. Now I'm setting up shared gradient definitions for the cards.
+
+Adding card border, grid overlay, and a top accent line—realizing a zero-height rect would break the gradient, so I'll use height 2 instead. Then I'm sketching the icon ring with an inner circle and a rotating dashed outer ring.
+
+Now I'm defining the font styles for headings, body text, and labels, then moving on to building the tags.svg file with pill shapes sized to fit each tag's text width.
+
+Calculating pill positions and widths...
+
+Adding a green center dot to finish the chip icon, then matching stroke colors per pill to the banner badges. For the divider I'm building a thin gradient line with a cyan-stroked diamond marker at center and small moving dot animations traveling along the line.
+
+Now I'm laying out the info banner's three tiles with careful padding so edge strokes don't clip, and sketching each tile's icon group with a rotating dashed ring plus a label position.
+
+Drawing icon glyphs...
+
+Now I'm laying out features.svg with three cards, each showing a large faded number, an icon, a title, description lines, and a small accent bar at the bottom.
+
+For the icons, I'm designing a venn-diagram glyph for integration with overlapping cyan, green, and violet circles, and a dashed trajectory with a tiny drone shape for the simulation card, though I'm reconsidering the drone's scale since it's coming out too small.
+
+I'm sketching a launch pad ellipse, a chip glyph with pins on all four sides for hardware, and embedded code brackets in green to represent software, then setting up the next card's overall dimensions at 1200x320.
+
+For this card's left panel, I'm designing an eye-shaped icon with a rotating dashed ring, a glowing iris and pupil, and an animated scanning line clipped within the eye shape, surrounded by orbiting nodes. Then I'm adding a faint vertical separator and positioning the text block starting with a "RESEARCH AREA 01" label above the title.
+
+Now I'm laying out the research question text with careful character-width math to keep lines within bounds, followed by a "TECHNIQUES AND METHODS" label and a row of pill-shaped tags whose widths I'm calculating from text length.
+
+Adjusting card height...
+
+Now moving to the join.svg layout, I'm placing a left icon with concentric rings and a scaled-down drone glyph with animated upward chevrons beneath it, then positioning a separator and the "JOIN US" label with title text to the right.
+
+For the title I'm settling on "Take off with EIUS Lab" to keep the drone theme playful while avoiding redundancy with the label, and drafting body copy explaining that students interested in drones, networking, or AI are welcome regardless of prior expertise, checking the line lengths fit within the card width.
+
+Working out the overall layout now, I'm budgeting height for the label, title, three body lines, and an info row showing graduation icon with "Master's students / undergraduate project students" text and a mail icon with contact info, adjusting the SVG height to 260 and card height to 256 to fit everything tightly.
+
+Adding mail icon and decorative elements...
+
+Still designing icons...
+
+I notice the user reverted my HTML-based header to plain markdown syntax (using `#` for the title and `![]()` for images), which suggests they prefer simpler markdown over inline HTML alignment tags. I should follow that preference going forward and keep the structure markdown-native rather than reintroducing centered HTML blocks.
+
+Writing out the full README markdown...
+
+I'll keep the contact line clickable with a mailto link even though it duplicates the card slightly, since that's useful for copying. The about paragraphs stay, and advisor/established details only live in the alt text now. I'll add a divider after the header and maybe a small footer to close things out, since GitHub's heading borders mostly handle section separation already.
+
+Dropping the old shield badges in favor of the new tags.svg, and now moving into writing the actual SVG files with a shared style block defining fonts, labels, titles, body text, and icon strokes. Writing SVG code...
+
+Writing info card markup...
+
+Still writing SVG markup...
+
+Still writing drone icon code...
+
+I'm also adding the drone hover animation and the connecting node cluster with animated dots along motion paths, then checking card layout dimensions and text widths to make sure the body copy and info row fit within the card bounds.
+
+For the mail icon and text, I notice it collides with the cluster region, so I'm narrowing the cluster's vertical range to avoid overlap. For the research card, I'm adding small decorative corner circuit traces with nodes to the top-right of the larger cards for visual consistency across them.
+
+Now I'll apply the same trace treatment to the research and join cards, then start writing out the actual files, being careful with the XML structure.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+I'll build a set of matching SVGs that use the banner's look: dark navy cards, cyan, green and violet accents, glowing nodes and subtle motion. They are:
+
+- one icon per section heading
+- custom tag pills to replace the shields.io badges
+- a divider
+- cards for the lab info, features, research area and Join Us
+
+Each SVG will be plain ASCII and self-contained so GitHub renders it reliably. Starting with the small pieces: the section icons, tags and divider.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\icons\about.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\icons\features.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\icons\research.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\icons\join.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\cards\tags.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\divider.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+Now I'm laying out the cards for info, features, research-ai, and join.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+Now the four content cards.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\cards\info.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\cards\features.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\cards\research-ai.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\assets\cards\join.svg</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+Now let me check the README, reading its current state first to make sure nothing's changed since I last looked.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+Now I'll wire the SVGs into the README, after re-reading it in case you've changed it since my last edit.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\project\.github\profile\README.md</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\project\.github\profile\README.md</summary>
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+I need to verify everything: parse the SVGs as XML, check for ASCII-only content, and confirm the README has no stray emoji besides the middle dot from the user's own text. Then I'll preview it by setting up a temp directory with the profile HTML and a copy of the assets, checked relative to the assets path.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+Next I'll validate every SVG (well-formed XML, ASCII only) and check the README for emoji.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Get-ChildItem assets -Recurse -Filter *.svg | ForEach-Object { $b=[IO.File]::ReadAllBytes($_.FullName); $nonAscii=($b | Where-Object { $_ -gt 127 }).Count; try { [xml][Text.Encoding]::ASCII.GetString($b) | Out-Null; $ok=&#34;XML OK&#34; } catch { $ok=&#34;XML ERROR: $($_.Exception.Message)&#34; }; &#34;{0,-28} {1,6}B nonASCII={2} {3}&#34; -f $_.FullName.Substring($PWD.Path.Length+1), $b.Length, $nonAscii, $ok }
+$s=[IO.File]::ReadAllText((Resolve-Path profile\README.md), (New-Object Text.UTF8Encoding($false,$true))); &#34;README emoji/pictographs: &#34; + ([regex]::Matches($s, &#39;[\u2600-\u27BF]|[\uD83C-\uD83E][\uDC00-\uDFFF]&#39;)).Count; &#34;README non-ASCII chars: &#34; + (([regex]::Matches($s, &#39;[^\x00-\x7F]&#39;) | ForEach-Object { $_.Value }) -join &#39;,&#39;)</summary>
+```bash
+Get-ChildItem assets -Recurse -Filter *.svg | ForEach-Object { $b=[IO.File]::ReadAllBytes($_.FullName); $nonAscii=($b | Where-Object { $_ -gt 127 }).Count; try { [xml][Text.Encoding]::ASCII.GetString($b) | Out-Null; $ok="XML OK" } catch { $ok="XML ERROR: $($_.Exception.Message)" }; "{0,-28} {1,6}B nonASCII={2} {3}" -f $_.FullName.Substring($PWD.Path.Length+1), $b.Length, $nonAscii, $ok }
+$s=[IO.File]::ReadAllText((Resolve-Path profile\README.md), (New-Object Text.UTF8Encoding($false,$true))); "README emoji/pictographs: " + ([regex]::Matches($s, '[\u2600-\u27BF]|[\uD83C-\uD83E][\uDC00-\uDFFF]')).Count; "README non-ASCII chars: " + (([regex]::Matches($s, '[^\x00-\x7F]') | ForEach-Object { $_.Value }) -join ',')
+```
+
+```
+assets\divider.svg             1982B nonASCII=0 XML OK
+assets\drone-network.svg      15751B nonASCII=0 XML OK
+assets\cards\features.svg      6197B nonASCII=0 XML OK
+assets\cards\info.svg          3710B nonASCII=0 XML OK
+assets\cards\join.svg          6808B nonASCII=0 XML OK
+assets\cards\research-ai.svg   5733B nonASCII=0 XML OK
+assets\cards\tags.svg          1804B nonASCII=0 XML OK
+assets\icons\about.svg          614B nonASCII=0 XML OK
+assets\icons\features.svg       524B nonASCII=0 XML OK
+assets\icons\join.svg           499B nonASCII=0 XML OK
+assets\icons\research.svg       549B nonASCII=0 XML OK
+README emoji/pictographs: 0
+README non-ASCII chars: �P
+
+```
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+The only odd character is a middle dot, which is fine. I'm planning to preview by copying the profile HTML and assets into a temp dir and rendering through the GitHub API, checking both themes, and confirming relative asset paths still resolve correctly.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+All 11 SVGs parse correctly and are pure ASCII, and the README has no emoji aside from a `·` character. Next I'll render the README through GitHub's Markdown API in light theme to verify layout and text fit.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $tmp = Join-Path $env:TEMP &#34;eius-preview&#34;; Remove-Item -Recurse -Force $tmp -ErrorAction SilentlyContinue; New-Item -ItemType Directory -Force &#34;$tmp\profile&#34; | Out-Null; Copy-Item -Recurse assets &#34;$tmp\assets&#34;
+$md = [IO.File]::ReadAllText((Resolve-Path profile\README.md), [Text.Encoding]::UTF8)
+[IO.File]::WriteAllText(&#34;$tmp\req.json&#34;, (@{ text = $md; mode = &#34;gfm&#34; } | ConvertTo-Json -Compress), (New-Object Text.UTF8Encoding($false)))
+cmd /c &#34;gh api /markdown --input `&#34;$tmp\req.json`&#34; &gt; `&#34;$tmp\body.html`&#34;&#34;
+$html = [IO.File]::ReadAllText(&#34;$tmp\body.html&#34;, [Text.Encoding]::UTF8)
+foreach ($theme in &#34;light&#34;,&#34;dark&#34;) {
+  $bg = if ($theme -eq &#34;dark&#34;) { &#34;#0d1117&#34; } else { &#34;#ffffff&#34; }
+  $page = &#34;&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=`&#34;utf-8`&#34;&gt;&lt;link rel=`&#34;stylesheet`&#34; href=`&#34;https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-$theme.min.css`&#34;&gt;&lt;style&gt;body{background:$bg;margin:0}.markdown-body{max-width:980px;margin:0 auto;padding:32px}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;article class=`&#34;markdown-body`&#34;&gt;$html&lt;/article&gt;&lt;/body&gt;&lt;/html&gt;&#34;
+  [IO.File]::WriteAllText(&#34;$tmp\profile\$theme.html&#34;, $page, (New-Object Text.UTF8Encoding($false)))
+}
+&#34;img tags: &#34; + ([regex]::Matches($html, &#39;&lt;img&#39;)).Count + &#34;, mailto links: &#34; + ([regex]::Matches($html, &#39;href=&#34;mailto:&#39;)).Count
+$p = Start-Process python -ArgumentList &#34;-m&#34;,&#34;http.server&#34;,&#34;8767&#34;,&#34;--bind&#34;,&#34;127.0.0.1&#34; -WorkingDirectory $tmp -WindowStyle Hidden -PassThru; &#34;pid $($p.Id)&#34;</summary>
+```bash
+$tmp = Join-Path $env:TEMP "eius-preview"; Remove-Item -Recurse -Force $tmp -ErrorAction SilentlyContinue; New-Item -ItemType Directory -Force "$tmp\profile" | Out-Null; Copy-Item -Recurse assets "$tmp\assets"
+$md = [IO.File]::ReadAllText((Resolve-Path profile\README.md), [Text.Encoding]::UTF8)
+[IO.File]::WriteAllText("$tmp\req.json", (@{ text = $md; mode = "gfm" } | ConvertTo-Json -Compress), (New-Object Text.UTF8Encoding($false)))
+cmd /c "gh api /markdown --input `"$tmp\req.json`" > `"$tmp\body.html`""
+$html = [IO.File]::ReadAllText("$tmp\body.html", [Text.Encoding]::UTF8)
+foreach ($theme in "light","dark") {
+  $bg = if ($theme -eq "dark") { "#0d1117" } else { "#ffffff" }
+  $page = "<!doctype html><html><head><meta charset=`"utf-8`"><link rel=`"stylesheet`" href=`"https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-$theme.min.css`"><style>body{background:$bg;margin:0}.markdown-body{max-width:980px;margin:0 auto;padding:32px}</style></head><body><article class=`"markdown-body`">$html</article></body></html>"
+  [IO.File]::WriteAllText("$tmp\profile\$theme.html", $page, (New-Object Text.UTF8Encoding($false)))
+}
+"img tags: " + ([regex]::Matches($html, '<img')).Count + ", mailto links: " + ([regex]::Matches($html, 'href="mailto:')).Count
+$p = Start-Process python -ArgumentList "-m","http.server","8767","--bind","127.0.0.1" -WorkingDirectory $tmp -WindowStyle Hidden -PassThru; "pid $($p.Id)"
+```
+
+```
+img tags: 12, mailto links: 2
+pid 56412
+
+```
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_navigate"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_navigate**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_navigate",
+      "parameters": "{\"url\":\"http://127.0.0.1:8767/profile/light.html\",\"viewId\":\"9f544a\",\"take_screenshot_afterwards\":true}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"Browser view not found: 9f544a. Use browser_navigate without a viewId to create a new tab.\"}]}"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_navigate"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_navigate**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_navigate",
+      "parameters": "{\"url\":\"http://127.0.0.1:8767/profile/light.html\",\"newTab\":true}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+````json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"### Action: snapshot\\n- Total refs: 0\\n- Interactive refs: 0\\n- Browser View ID: 9fa07e\\n\\n### Page state\\n- Page URL: about:blank\\n- Page Title: \\n- Page Snapshot:\\n```yaml\\n- role: document\\n  ref: root\\n```\"},{\"type\":\"text\",\"text\":\"{\\\"type\\\":\\\"metadata\\\",\\\"viewId\\\":\\\"9fa07e\\\",\\\"title\\\":\\\"\\\",\\\"url\\\":\\\"about:blank\\\",\\\"locked\\\":false}\"}]}"
+}
+````
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_navigate"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_navigate**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_navigate",
+      "parameters": "{\"url\":\"http://127.0.0.1:8767/profile/light.html\",\"viewId\":\"9fa07e\",\"take_screenshot_afterwards\":true}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+````json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"### Action: snapshot\\n- Total refs: 22\\n- Interactive refs: 13\\n- Browser View ID: 9fa07e\\n\\n### Page state\\n- Page URL: http://127.0.0.1:8767/profile/light.html\\n- Page Title: \\n- Page Snapshot:\\n```yaml\\n- role: document\\n  ref: root\\n  children:\\n    - role: link\\n      ref: e0\\n    - role: link\\n      ref: e1\\n      nth: 1\\n    - role: link\\n      ref: e2\\n      nth: 2\\n    - role: link\\n      ref: e3\\n      nth: 3\\n    - role: link\\n      ref: e4\\n      nth: 4\\n    - role: link\\n      ref: e5\\n      nth: 5\\n    - role: link\\n      ref: e6\\n      nth: 6\\n    - role: link\\n      ref: e7\\n      nth: 7\\n    - role: link\\n      ref: e8\\n      nth: 8\\n    - role: link\\n      ref: e9\\n      nth: 9\\n    - role: link\\n      ref: e10\\n      nth: 10\\n    - role: link\\n      name: eiuslab717@gmail.com\\n      ref: e11\\n    - role: link\\n      ref: e12\\n      nth: 11\\n    - role: heading\\n      name: EIUS Lab\\n      ref: e13\\n      level: 1\\n      name: Edge Intelligence \u0026 Unmanned Systems Lab Department of Computer Science and Information Engineering · Lunghwa University of Science and Technology\\n      ref: e14\\n    - role: heading\\n      name: About Us\\n      ref: e15\\n      level: 2\\n      name: EIUS Lab focuses on interdisciplinary research across drone systems, wireless communication, and artificial intelligence . We see drones not just as flying vehicles, but as intelligent aerial nodes th\\n      ref: e16\\n      name: Our research spans problem definition, algorithm design, and simulation, all the way to real-world flight testing, with the goal of turning theory into results that work in the field.\\n      ref: e17\\n    - role: heading\\n      name: What Makes Us Different\\n      ref: e18\\n      level: 2\\n    - role: heading\\n      name: Research Areas\\n      ref: e19\\n      level: 2\\n    - role: heading\\n      name: Join Us\\n      r
+… (output truncated)
+````
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+This looks good overall — the image links GitHub adds automatically are expected, the divider is a bit faint on light theme but fine, and heading icons align properly. Now I should scroll down to check the cards.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+The header, tags, divider and section icon look consistent. Next I'll scroll through the cards to check that the text fits.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_scroll"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_scroll**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_scroll",
+      "parameters": "{\"viewId\":\"9fa07e\",\"direction\":\"down\",\"amount\":10}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"### Action: scroll\\n- Scrolled page by (0, 10) pixels\\n- Actual scroll: (0px, 10px)\"},{\"type\":\"text\",\"text\":\"{\\\"type\\\":\\\"metadata\\\",\\\"viewId\\\":\\\"9fa07e\\\"}\"}]}"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_cdp"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_cdp**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_cdp",
+      "parameters": "{\"viewId\":\"9fa07e\",\"method\":\"Runtime.evaluate\",\"params\":{\"expression\":\"window.scrollTo(0, 720); window.scrollY\",\"returnByValue\":true}}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"{\\n  \\\"result\\\": {\\n    \\\"description\\\": \\\"720\\\",\\n    \\\"type\\\": \\\"number\\\",\\n    \\\"value\\\": 720\\n  }\\n}\"},{\"type\":\"text\",\"text\":\"{\\\"type\\\":\\\"metadata\\\",\\\"viewId\\\":\\\"9fa07e\\\"}\"}]}"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_take_screenshot"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_take_screenshot**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_take_screenshot",
+      "parameters": "{\"viewId\":\"9fa07e\"}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"Screenshot captured successfully\\nFilename: page-2026-11-05T05-57-50-814Z.png\\nSaved to: c:\\\\Users\\\\09882\\\\AppData\\\\Local\\\\Temp\\\\cursor\\\\screenshots\\\\page-2026-11-05T05-57-50-814Z.png\"},{\"type\":\"image\",\"data\":\"iVBORw0KGgoAAAANSUhEUgAABAAAAANFCAYAAADlL47SAASU7ElEQVR4AezBTY/1+WEm5Os+VW23k3g8QcOMJ4IMihVnUDYRggWLaDIaPkA27FggwVdArBESS74FayQEi6BISRjNJFIWMB55JKKkE4gTyJs9Y9x2vzzn3JxzflX1r3+dc6rqefrpsrv7d13pnmmapmmapmmapmmaPjO2263XtTFN0zRN0zRN0zRN0+fexjRN0zRN0zRN0zRNn3sb0zRN0zRN0zRN0zR97l2bpmmapmmapmmapukz77333vP7v//7vv71r/vVX/1Vm83GfdemaZqmaZqmaZqmafpM+973vuc3f/M3vf/++/78z//c1772Nb/yK7/ivo1pmqZpmqZpmqZpmj6zdrud3/md3/H++++79bu/+7v++q//2n0b0zRN0zRN0zRN0zR9Zn3rW9/yx3/8x+774IMP/PZv/7aPPvrIrY1pmqZpmqZpmqZpmj6Tvvvd7/q93/s953znO9/xrW99y61r0zRN0zRN0zRN0zR9Jn33u9/10Ucf2Ww2zvmLv/gLt65N0zRN0zRN0zRN0/SZ9I1vfMOv//qve/XqlXO+/vWvu3VtmqZpmqZpmqZpmqbPpCR+/ud/3nNsTNM0TdM0TdM0TdP0ubcxTdM0TdM0TdM0TdPn3sY0TdM0TdM0TdM0TZ97G9M0TdM0TdM0TdM0fe5dm6ZpmqZpmqZpmqbpM+2v/uqvfPvb3/Y3f/M33n33Xd/85jf9wi/8gqurK7euTdM0TdM0TdM0TdP0mfXee+/5jd/4DR988IFbf/RHf+SXf/mX/dqv/ZqrqysHG9M0TdM0TdM0TdM0fSZ9+OGHfuu3fssHH3zgvu1269vf/rb33nvPrY1pmqZpmqZpmqZpmj6T/uzP/swPfvAD52y3W3/4h3/o1sY0TdM0TdM0TdM0TZ9JP/rRj+x2O5e8//77bm1M0zRN0zRN0zRN0/S5tzFN0zRN0zRN0zRN0+fexjRN0zRN0zRN0zRNn3sb0zRN0zRN0zRN0zR97m1M0zRN0zRN0zRN0/S5tzFN0zRN0zRN0zRN0+fexjRN0zRN0zRN0zRNn3vXvsD+n7/4Sx9/9LFpmqafKAk1fVpiKGIoYlHEUMSiiPOKWBRxXhHnFbEo4tNVxHlFLIp4niKGIhZFnFfEooihhhiKoKZPTRHUNE3TT4p33/2yv/tv/x3T8137Avv1//Q/9y/+j295UVcbdujOi0nYbNhuvairK3Y7Wi/q6ort1ovaXNEdrRd1dc32lRd1dcVuR+vTFXcSNhu2W2IoYi9eTzxXrq91u3WniCfEY4IiqDNCNle63QqKoIbYi71QBHVZDEUMjaMYSq6udLf1euKTytW1bl8Z4kRQBLWIoYihhhiKWBQhmyvdFfW6gjovKIJai7CJ7nYOgiKo84IiqPOCIqhTubpiu1UEdV5QBHVeUAR1XuwliHbnMUE9T1CPKLm60t0WpYihiEURQw0x1DPVUSLZ6G7rk6lnKYLNFbutlSJ1VEMM9bTUQUtQBDUkIWG3UwR1XlAE9VCdKIJaC9lc6faV56vXU2qIIUHY7SzqU3d1zfaVF5UNwW7nRV1dsd16UdkQ7HZe1NU121de1GbjaLfzoq6u2G69pP/kn/wj//P/+D+Ynu/aF1hb3W69uF3pzsuJXNPt1ktKotstrZeUbHS79
+… (output truncated)
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+The scroll didn't seem to take effect in the screenshot - maybe the viewport capture isn't reflecting the page scroll position. I'll try a larger scroll amount, like 750, to see if that actually moves things.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_scroll"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_scroll**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_scroll",
+      "parameters": "{\"viewId\":\"9fa07e\",\"direction\":\"down\",\"amount\":740}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"### Action: scroll\\n- Scrolled page by (0, 429.5) pixels\\n- Actual scroll: (0px, 429.5px)\"},{\"type\":\"text\",\"text\":\"{\\\"type\\\":\\\"metadata\\\",\\\"viewId\\\":\\\"9fa07e\\\"}\"}]}"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_take_screenshot"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_take_screenshot**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_take_screenshot",
+      "parameters": "{\"viewId\":\"9fa07e\"}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"Screenshot captured successfully\\nFilename: page-2026-11-05T05-57-57-373Z.png\\nSaved to: c:\\\\Users\\\\09882\\\\AppData\\\\Local\\\\Temp\\\\cursor\\\\screenshots\\\\page-2026-11-05T05-57-57-373Z.png\"},{\"type\":\"image\",\"data\":\"iVBORw0KGgoAAAANSUhEUgAABAAAAANFCAYAAADlL47SAASsrklEQVR4AezBebjdB30f6PdzzrlXu2TLljcZvAWMMbvZQxqgCSHlKdAspElom2m6ZCZJp+1Mns50tj/6zDwz05mk6TNt0zbtdNpsJRSaJwQCIQFDwOzEBtvgTZZ3W/uVdHWXc853dPWTdPerczdJGL1v6iTfpb7+1H7vevdfd/TJp6xKu02/T3H1FS+w79BT+v2uM9qX73Tl+97n4H/8Lb2REUsZuvpqN/36/2f80T0e/+9+ydZs8A9+9tcdPzHiV/79z+tu6Xv17/5Vqjzz5ettfMUb7f2FnzP56KN+5r3/s1ff9jb/9//7c/Y+9y23/MM/77q/eoe7f/I3Hfny45aS4WFX/ORPO/LpO40/+qi0WlSpKq+89S3ue/hLJrsTliudIdWdJKEQlNlilqDMlnZb9XqCQjTKfHFGUAoRWi0U/bIqnTa9HqURA4i50m6rXs+qtFpO6ffNFgMLabdVr0eZLZYlnY7q9lAasWyJtKJ6fSsXabeoPkVZWMxWpsVpnQ7drsHELO2Wn/+f/p5/9Nffq231/u2dX/V3/+ovqokJq9Lp0O1KWq658gZP79tjpo0veYltr32dA7/zm/T7BpLY+eM/obNzp+f+1a/R71tP7W3bXPH+n7HvN/6D3siIdDqq27Vxw2a3XP9y9z3yJVVludLpqG7XtDglzikopNVSTur3LSRmK/NFaLfp9ygrF7TbdHsEZbY4LSjEghIS+n2r0unQ7Tq3WFKnTa9nVRJptVSvh1iptFtUqX5ZriSqikTabdXtOSMxT5kv5ui06fYsT0xpb97k3/32/+Pdr36x1Zosfv4f/7rf/tV/Rb9vxRJabXpdmzduNzy0weGj+8x02Tt+SE2OO3rnpw1iy+ve4AX/+Jc99nd/wcQj97vtn7zHlT/4Ivf+/Ic99/v3UeWscPmbb3T7v/wxJx454O73/7ZsudxN/+bf2//v/o2DH/gdg9j00pfa9Ko77P/N3zQlnbbq9lyx4xo7tl3hkSfutVxptQjV6yMEhaDMFrMEpZF2m15fKVOCQlDmi5liSiGdNt2eVUlot+j2nBUDiFnaLXp9q5VOR3W7FhbnFI1Wm36PMi2WJa02Var6ZovlSKejul2rkki7Ta+nEJT5Yr4yLa0Wheo7t6AQZ1z94lt85Hd+1Yuv3OG7Va/Xs1wtl6yZJHbt3G2oM2SWXpdE2m3nMvnss5751V+26WUvd/0/+l+9+e3vt3PHNX7rI/+HE2PHTB4as/df32fjzdd44Y9vMfqp3zLx2B79fs8H/vBXTEyM+YEfeL8X/S/vsPuvvdZj//zzjnz5ceeSVks6Q2piwimhQgRRVqqcUoWinFTmKWeVueKM0iiUhRUKpZRGKWeURmmURlmhQqE0CoUyQ5kn1kBZWKFQKEsqJ8WiysDKlDKtUJarrFY5owqlUSiUUwqFQpmtUBqlURqFQpmrUCiUi1eZksQ1V95orhobk+Eh6XQMqnPllXb9jb+ttWUL/b711tqwgX5PdbtmaqWtlKqyNsophUKhNMosZTCFQqEsrJSZCoVCWaGysHJSUU4qlEaZKXFxKRQKhUKhUJapUCgrUlakqpxSpVEoUwpVFAplYaVRzohCoTTKIMrFKhobNmxyxWXXmKs/Nqa1cZOlpN224aabbLz1JYZf8
+… (output truncated)
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+Text fits well, so now I'm scrolling up to check the middle section with the info and top features.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+The research and Join Us cards fit cleanly. I'll scroll up to check the info and feature cards.
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_scroll"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_scroll**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_scroll",
+      "parameters": "{\"viewId\":\"9fa07e\",\"direction\":\"up\",\"amount\":330}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"### Action: scroll\\n- Scrolled page by (0, -275) pixels\\n- Actual scroll: (0px, -275px)\"},{\"type\":\"text\",\"text\":\"{\\\"type\\\":\\\"metadata\\\",\\\"viewId\\\":\\\"9fa07e\\\"}\"}]}"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_take_screenshot"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_take_screenshot**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_take_screenshot",
+      "parameters": "{\"viewId\":\"9fa07e\"}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+```json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"Screenshot captured successfully\\nFilename: page-2026-11-05T05-58-02-772Z.png\\nSaved to: c:\\\\Users\\\\09882\\\\AppData\\\\Local\\\\Temp\\\\cursor\\\\screenshots\\\\page-2026-11-05T05-58-02-772Z.png\"},{\"type\":\"image\",\"data\":\"iVBORw0KGgoAAAANSUhEUgAABAAAAANFCAYAAADlL47SAAREh0lEQVR4AezBB6DdZWE34Of3P+dmsVcCskEQlCkyBQRxtLRqrav9rHUvxG1duMBtXRW3KAouUItSFVGUJUuWIEOQTdgJKzv3nPN+uTkGEsi4yb0ghvd5UubxaFZ6ZkyfZfxqq2j0ffhVBxo44APe/e97eOSZ43Nve5U/rHKA7x32Mk0sU6/bMWv2oAmrjBePdLN98CX/asLzPuld/7K9IXNnz9RrjTVuoGV5zZ09Q6813riBxpDzjv+Kg394i7O/f5gVUXpdM2fNNWGV8eLhN/Oeyzz7mW/zsR/91G4bj7M00yZf7EUvPtjLPv0DL9x1Qyti7pxZehlj3JiWIecf+xlvOnHQGd98t9Ew885rHfTSV8vW+9piq8d71V4TPPegrzr8e0fbddM1LM3kC3/lX997rF/9+GvWXmXAg83y8de8zC07vMIXDn6mqqqqqqqqqlqZdLtdy6vxKDfjurP858vfb4q/F2M999Vv9rYXP10Tw3LJSUd568e+a9DfocF7feaQN/rJuTdbfvf67ze/xnEX32W0XHnaMd7wwSPM9ci36sQtvfewj3jKNutZUf/z3lc77qzrPFQmX3SavzRb+9hh7/P+1z3fuo/dwyc+/C6PW381VVVVVVVVVVWNrrZHucF7bnftrff4e7LZtk+ymeG765br3X7vuv4u9ea45pobrN8tlt9cV115g017xWi557br3Xp329+DjFnF3k/Z10hc+5crTex5yEy7c4oxY1cxZqAxZGDC2vbb/8mqqqqqqqqqqhp9rQ/N41HqN0d/0sEfO8rtd9zg1/93vPOumuup++/szOO/x4Y7u+WsY7370E/5/s9PscoGW9lm43X19Zx70k8c8r4P+eIR33X2ZZM99vE7WHe1sYbMmXaHH3zziz74sU874ts/8PuLrzVps61tuM6qKE797md99ldXm3bJCd7+gU/6y7XXOeIn53jGM/YytjHfPdef4xVv/Ljt9j7Auqu0LeyXRxzqqHNm2n/Xrdx782Ve95YPe8wGazr8E4f6xBeOcNYVU+y40w7WGD/gy+9/pc8de6Ybr7nU8cf9rzsGtrTXdhuZeddkR375cw795Od886gfOveKW2zy2MeZuMZ4i/Ojw9/rxxdNc+1vj/Lujx5tm333teHqY/3x1J865AOHOfzrRzn94ms99vE7WG/1cZS5zvzlj7z/0A/74je+49cXXG/3Pfey+j1/8i//+WZb7/cCG6xqvhl/OcWLDvqKp73g6SboOOW4Yww8/ul2WPt2L3/B65133S0uPPNkP/np8bY/4IXWLlP84JuH++CH/9sRRx/rqnsm2GfXx2ncb+o153v1yw523vW3u+D3J/nfX51qh72fqXvzhX55yXR7rj/De959iC8eeayrpsauT9zWmFb05kzzi2O/47CPftKXj/iO35z1Z5s/YQcbrDnBtz5ykI8ffYqbrrvc//30OJN7G9lnp83EX3Xu9O5XvsKUiXvYbuPVDfnd9z/rbV8/w/MP3EuDO68800vf8UUHHPhU45ueC079uQ9/5KM+9+Uj/OgXp+iMWdvjttpEO3Tm3ujVL3qTZq01fPawQxz3x6meuccmjvnuiQ544b/ZcI22Gy48wcted5i1n7CbLSetbhHTJjv4oLdZbft9bLrWeJec+C0f+
+… (output truncated)
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+<think><details><summary>Thought Process</summary>
+The simulation icon looks fine at this size, and the dark cards should blend well on GitHub's dark theme. Worth a quick glance to confirm, so I'll navigate to dark mode and grab a screenshot of the top.
+
+</details></think>
+
+_**Agent (claude-opus-5-5)**_
+
+Everything fits in the light theme. One quick look at GitHub's dark theme:
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="mcp-cursor-ide-browser-browser_navigate"><details>
+<summary>Tool use: **mcp-cursor-ide-browser-browser_navigate**</summary>
+
+Parameters:
+
+```json
+{
+  "tools": [
+    {
+      "name": "browser_navigate",
+      "parameters": "{\"url\":\"http://127.0.0.1:8767/profile/dark.html\",\"viewId\":\"9fa07e\",\"take_screenshot_afterwards\":true}",
+      "serverName": "cursor-ide-browser"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success"
+}
+```
+Result:
+
+````json
+{
+  "result": "{\"content\":[{\"type\":\"text\",\"text\":\"### Action: snapshot\\n- Total refs: 22\\n- Interactive refs: 13\\n- Browser View ID: 9fa07e\\n\\n### Page state\\n- Page URL: http://127.0.0.1:8767/profile/dark.html\\n- Page Title: \\n- Page Snapshot:\\n```yaml\\n- role: document\\n  ref: root\\n  children:\\n    - role: link\\n      ref: e0\\n    - role: link\\n      ref: e1\\n      nth: 1\\n    - role: link\\n      ref: e2\\n      nth: 2\\n    - role: link\\n      ref: e3\\n      nth: 3\\n    - role: link\\n      ref: e4\\n      nth: 4\\n    - role: link\\n      ref: e5\\n      nth: 5\\n    - role: link\\n      ref: e6\\n      nth: 6\\n    - role: link\\n      ref: e7\\n      nth: 7\\n    - role: link\\n      ref: e8\\n      nth: 8\\n    - role: link\\n      ref: e9\\n      nth: 9\\n    - role: link\\n      ref: e10\\n      nth: 10\\n    - role: link\\n      name: eiuslab717@gmail.com\\n      ref: e11\\n    - role: link\\n      ref: e12\\n      nth: 11\\n    - role: heading\\n      name: EIUS Lab\\n      ref: e13\\n      level: 1\\n      name: Edge Intelligence \u0026 Unmanned Systems Lab Department of Computer Science and Information Engineering · Lunghwa University of Science and Technology\\n      ref: e14\\n    - role: heading\\n      name: About Us\\n      ref: e15\\n      level: 2\\n      name: EIUS Lab focuses on interdisciplinary research across drone systems, wireless communication, and artificial intelligence . We see drones not just as flying vehicles, but as intelligent aerial nodes th\\n      ref: e16\\n      name: Our research spans problem definition, algorithm design, and simulation, all the way to real-world flight testing, with the goal of turning theory into results that work in the field.\\n      ref: e17\\n    - role: heading\\n      name: What Makes Us Different\\n      ref: e18\\n      level: 2\\n    - role: heading\\n      name: Research Areas\\n      ref: e19\\n      level: 2\\n    - role: heading\\n      name: Join Us\\n      re
+… (output truncated)
+````
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+Both themes look good. Cleaning up the preview server and temporary files:
+
+_**Agent (claude-opus-5-5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Stop-Process -Id 56412; Remove-Item -Recurse -Force (Join-Path $env:TEMP &#34;eius-preview&#34;); git status --short</summary>
+```bash
+Stop-Process -Id 56412; Remove-Item -Recurse -Force (Join-Path $env:TEMP "eius-preview"); git status --short
+```
+
+```
+MM .specstory/history/2026-11-05_05-06-50Z-drone-svg-design.md
+D  "EIUS-Lab-\345\257\246\351\251\227\345\256\244\350\263\207\350\250\212.md"
+D  README.md
+MM profile/README.md
+?? assets/cards/
+?? assets/divider.svg
+?? assets/icons/
+
+```
+</details></tool-use>
+
+_**Agent (claude-opus-5-5)**_
+
+`profile/README.md` is now built from 10 new SVGs that share the banner's style, and it has no emoji. I rendered it with GitHub's Markdown API in both the light and dark themes. All text fits inside the cards, and every SVG is valid, plain ASCII.
+
+![Rendered cards](c:\Users\09882\AppData\Local\Temp\cursor\screenshots\page-2026-11-05T05-58-02-772Z.png)
+
+**Shared style:** Every new SVG uses the banner's dark navy background, faint grid, and cyan, green and violet accents. They also share one line-icon style, glowing nodes, slowly rotating dashed rings and a gentle pulse animation.
+
+**What's new:**
+- **Section icons** (`assets/icons/`): rounded-square icons next to each heading. About Us has a lab flask, What Makes Us Different has stacked layers, Research Areas has a target, and Join Us has a person with a plus sign.
+- **Tags** (`assets/cards/tags.svg`): three pills with their own icons (UAV Systems, Wireless Networks, Edge AI). They replace the shields.io badges, which used a different style.
+- **Divider** (`assets/divider.svg`): a glowing line with signal dots moving towards a centre node. It sits below the header and at the end of the page.
+- **Info card** (`assets/cards/info.svg`): three tiles for Advisor, Established and Location, with person, calendar and map-pin icons.
+- **Features card** (`assets/cards/features.svg`): three numbered cards with overlapping-circles, take-off-path and chip-with-code icons.
+- **Research card** (`assets/cards/research-ai.svg`): a large eye icon with a scanning line and orbiting nodes, then the research question and three method pills.
+- **Join Us card** (`assets/cards/join.svg`): a hovering drone with rising arrows, the recruitment text, who can apply, the email, and a small animated network. Clicking the card opens an email to the lab. I also kept a separate contact line in plain text so the address can be copied.
+
+**Two things to know:**
+- **Editing:** The advisor, feature, research and join details now live inside the SVGs, with the full text in each image's alt text. To change them, edit the `<text>` lines in the matching card file. The About Us paragraphs are still plain Markdown.
+- **New research areas:** To add one, copy `research-ai.svg`, change "RESEARCH AREA 01" and the text, and put the new image under the Research Areas heading.
